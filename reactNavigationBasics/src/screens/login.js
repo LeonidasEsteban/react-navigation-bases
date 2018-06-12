@@ -8,6 +8,7 @@ import {
 
 class Login extends Component {
   handlePress = () => {
+    console.log(this.props.navigation);
     this.props.navigation.navigate('About')
   }
   render() {

@@ -14,11 +14,29 @@ import Login from './src/screens/login';
 
 
 
-const AppNavigator = createStackNavigator({
-  Home,
-  About,
-  Profile,
-  Login,
-})
+const AppNavigator = createStackNavigator(
+  {
+    Home: {
+      screen: Home,
+      path: 'home/',
+      navigationOptions: {
+        title: 'Esta es la Home'
+      }
+    },
+    About,
+    Profile,
+    Login,
+  },
+  {
+    initialRouteName: 'Login',
+    navigationOptions: {
+      title: 'Un titulo genérico'
+    },
+    initialRouteKey: 'login',
+    initialRouteParams: {
+      nombre: 'Leonidas Esteban'
+    }
+  }
+);
 
 export default AppNavigator;
